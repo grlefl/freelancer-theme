@@ -80,8 +80,6 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
-/* header stuff */
-
 header {
     text-align: center;
     color: #fff;
@@ -89,7 +87,7 @@ header {
 }
 
 header .container {
-    padding-top: 180px;
+    padding-top: 120px;
     padding-bottom: 70px;
 }
 
@@ -102,10 +100,10 @@ header .intro-text .greeting {
     display: block;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 700;
     padding: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 header .intro-text .about-me {
@@ -132,11 +130,16 @@ header .intro-text .about-me {
         flex: 0 0 99%;
         max-width: 99%;
     }
-    .header-flex-row .intro-text .greeting {
-        text-align: center;
-    }
     .header-flex-row .intro-text .about-me {
         font-size: 1.2em;
+    }
+    .header-flex-row .intro-text .greeting {
+        font-size: 2em;
+    }
+}
+@media (min-width: 768px) {
+    header .container {
+        padding-top: 180px;
     }
 }
 @media(min-width: 960px) {
@@ -169,25 +172,22 @@ header .intro-text .about-me {
     }
 }
 
-@media(min-width:768px) {
+@media(min-width: 768px) {
     .navbar-fixed-top {
         padding: 25px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
     }
-
     .navbar-fixed-top .navbar-brand {
         font-size: 2em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
     }
-
     .navbar-fixed-top.navbar-shrink {
         padding: 10px 0;
     }
-
     .navbar-fixed-top.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }

@@ -80,6 +80,8 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
+/* header stuff */
+
 header {
     text-align: center;
     color: #fff;
@@ -87,8 +89,8 @@ header {
 }
 
 header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 180px;
+    padding-bottom: 70px;
 }
 
 header img {
@@ -96,31 +98,74 @@ header img {
     margin: 0 auto 20px;
 }
 
-header .intro-text .name {
+header .intro-text .greeting {
     display: block;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
+    padding: 20px;
+    text-align: left;
 }
 
-header .intro-text .skills {
-    font-size: 1.25em;
+header .intro-text .about-me {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
     font-weight: 300;
+    padding: 20px;
+    overflow-wrap: break-word;
 }
 
-@media(min-width:768px) {
-    header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
+/* Flexbox Header Grid - (all my code) */
+@media (min-width: 640px) {
+    .header-flex-grid .header-flex-row {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
     }
-
-    header .intro-text .name {
-        font-size: 4.75em;
+    .header-flex-item.profile {
+        flex: 0 0 99%;
+        max-width: 99%;
     }
-
-    header .intro-text .skills {
-        font-size: 1.75em;
+    .header-flex-item.intro-text {
+        flex: 0 0 99%;
+        max-width: 99%;
+    }
+    .header-flex-row .intro-text .greeting {
+        text-align: center;
+    }
+    .header-flex-row .intro-text .about-me {
+        font-size: 1.2em;
+    }
+}
+@media(min-width: 960px) {
+    .header-flex-item {
+        margin: 0 0 30px;
+    }
+    .header-flex-item.profile {
+        flex: 0 0 39%;
+        max-width: 39%;
+    }
+    .header-flex-item.intro-text {
+        flex: 0 0 59%;
+        max-width: 59%;
+    }
+    .header-flex-row .intro-text .about-me {
+        font-size: 1.3em;
+    }
+}
+@media (min-width: 1200px) {
+    .header-flex-grid .header-flex-row .header-flex-item  {
+        flex: 0 0 49%;
+        max-width: 49%;
+    }
+    .header-flex-item.profile img {
+        width: 75%;
+        max-width: none;
+    }
+    .header-flex-row .intro-text .about-me {
+        font-size: 1.5em;
     }
 }
 
@@ -185,7 +230,7 @@ section.success {
     background: #{{ site.color.primary }};
 }
 
-@media(max-width:767px) {
+@media(max-width:768px) {
     section {
         padding: 75px 0;
     }
@@ -246,12 +291,6 @@ section.success {
     z-index: 2;
 }
 
-@media(min-width:767px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px;
-    }
-}
-
 /* Flexbox Portfolio Grid */
 @media (min-width: 640px) {
     .portfolio-flex-grid .portfolio-flex-row {
@@ -264,20 +303,25 @@ section.success {
       flex: 1 0 49%;
       max-width: 49%;
     }
-  }
-  @media (min-width: 960px) {
-    .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-      flex: 1 0 32%;
-      max-width: 32%;
+}
+@media(min-width:768px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
     }
-  }
-  /* A large grid might need four columns on widescreen layouts */
-  /* @media (min-width: 1380px) {
+}
+@media (min-width: 960px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-      flex: 1 0 23.5%;
-      max-width: 23.5%;
+        flex: 1 0 32%;
+        max-width: 32%;
     }
-  } */
+}
+/* A large grid might need four columns on widescreen layouts */
+@media (min-width: 1380px) {
+    .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
+        flex: 1 0 23.5%;
+        max-width: 23.5%;
+    }
+}
 
 .btn-outline {
     margin-top: 15px;

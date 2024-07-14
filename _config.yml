@@ -66,4 +66,9 @@ defaults:
       path: ""
       type: "posts"
     values:
-      permalink: ""
+      permalink: ""  
+collections:
+  portfolio:
+    output: true
+  community:
+    output: true
